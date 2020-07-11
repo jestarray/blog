@@ -1,0 +1,5 @@
+#lang pollen
+
+◊misc/evolvedsimplicity.html{
+    misc/effective_education.html
+}
