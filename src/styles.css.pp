@@ -105,6 +105,7 @@ pre {
     /* Linux emoji */ "Noto Color Emoji";
 }
 
+
 a{
     /* remove underline */
     text-decoration: none;
@@ -201,4 +202,9 @@ article {
 .layout-spread-row {
     display: flex;
     justify-content: space-evenly;
+}
+
+pre {
+  width: 400px;
+  overflow: scroll;
 }
