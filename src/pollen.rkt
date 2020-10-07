@@ -244,7 +244,7 @@
 ; example.html -> example
 (define (trim-ext s)
   (string-replace s (bytes->string/utf-8 (path-get-extension s)) "" #:all? #f)
-)
+  )
 
 ; List<Page> -> txexpr
 ; pass in the (rest) of page-tree root
@@ -257,7 +257,7 @@
                                   [else (string-append (select 'time imp) " --- ")]) (txexpr 'a (list (cons 'href (cons (symbol->string j) '()))) (list (select 'h1 imp))))))
   (define (sec i) (txexpr 'ul '((style "list-style-type: none;")) (map wrap i)))
   (map sec ls)
-)
+  )
 
 
 ;(generate-toc (list (list 'misc/EvolvedSimplicity.html)))

@@ -17,4 +17,3 @@ Distribute:
 
 ## todo:
 * images are currently duplcated
-* script to optimize image size to pngquant
