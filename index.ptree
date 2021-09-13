@@ -1,0 +1,8 @@
+#lang pollen
+
+◊misc/evolvedsimplicity.html{
+    misc/effective_education.html
+    misc/howtowritecleancode.html
+    misc/badui.html
+    misc/learning_stages.html
+}

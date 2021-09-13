@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="all" href="/styles.css" />
+    <script src="/prism_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="/prism.css" />
+    <title>Evolved Simplicity</title>
+</head>
+
+<body>
+    <div class="container">
+        <main class="main-wrapper">
+
+            <div id="home"><a href="/index.html">Index</a></div>
+            <div id="next"><a href="/misc/effective_education.html">Effective Education</a> →</div>
+            <article>
+                <h1>Evolved Simplicity</h1><p><time>4/17/20</time></p><p><img src="/images/simp.png" style="max-width:100%; height:auto;"/></p><p>A reoccuring theme that arises is the return to the beginning, a cycle of sorts. Children want to be adults, and then when they become adults, they return to wanting to being children again. This is not to say the middle part is completely baggage, in some ways it’s needed to get to the state of what I call “Evolved Simplicity”.</p><h2 id="the_journey"><a class="anchor" href="#the_journey">#</a>The Journey</h2><ol><li>Start from a place of naivety</li><li>Get entangled with complexity</li><li>Return to simplicty with evolved context</li></ol><p>An experience I’ve had with evolved simplicity is with the web. I’ve dabbled in web development before and it’s very stuck in the intermediate phase of Evolved Simplicy. The SPA phase where everything should be offloaded to the client in javascript because things wil be faster since there will be no more network requests. Well, it turns out the cost of parsing Javascript is prohibitively more expensive. There are times when you want to offload everything to the client, like if you’re making games, but for simple web pages like blog posts, the benefits are very neligable if not detriemental. See <a href="https://v8.dev/blog/cost-of-javascript-2019">The Costs Of Javascript</a> for more details.</p><h2 id="back_to_plain_html"><a class="anchor" href="#back_to_plain_html">#</a>Back to plain html</h2><p>We’ve all been given the advice to keep some form of a wiki, but most of them are written in PHP, with the exception of a slight few. For a while now I’ve used <a href="https://tiddlywiki.com">TiddlyWiki</a> for blogging. It stores everything in one giant index.html file, which makes it very portable because you just drag 1 file to a flash drive and you’re done, however this does not scale well because there’s no segmentation. Everyone must download every post you have ever written even if they’re not going to read them. What I need from a wiki is a version history, fast load times, and a good markup language. Using git solves one of those problems but what about the other two?</p><h2 id="pollen_and_racket(lisp)"><a class="anchor" href="#pollen_and_racket(lisp)">#</a>Pollen and Racket(Lisp)</h2><p>I discovered <a href="https://docs.racket-lang.org/pollen/">Pollen</a>! A <b>programmable markup language</b>. It’s awesome.</p><p><code class="language-scheme">(2^ 4)</code> expands and renders nicely as <span>2<sup>4</sup></span> , which is a pain to write in plain html:</p><p><code class="language-html">&lt;span&gt;2&lt;sup&gt;4&lt;/sup&gt;&lt;/span&gt;</code></p><p>Generating tables turns from this:</p><pre><code class="language-html">&lt;table&gt;
+ &lt;caption&gt;4 in binary&lt;/caption&gt;
+ &lt;thead&gt;&lt;tr&gt;&lt;th&gt;8&lt;/th&gt;&lt;th&gt;4&lt;/th&gt;&lt;th&gt;2&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+ &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+ &lt;/table&gt;
+</code></pre><p>to this function call:<br/><code class="language-scheme">(deci-&gt;bin-table 4 4 #:caption “4 in binary”)</code></p><table><caption>4 in binary</caption><thead><tr><th>8</th><th>4</th><th>2</th><th>1</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>0</td><td>0</td></tr></tbody></table><p>It automates all the boring stuff with ease! The web should have adopted a LISP. All the problems of web development, e.g templating, css frameworks, frontend frameworks, etc, exist in part because HTML and CSS are not programmable. Rather than have the web split into 3 languages, we could have a unified extensible LISP. Today we suffer the consequences of Netscape culting around Java and rejecting <a href="http://speakingjs.com/es5/ch04.html">Eichs</a> idea for a LISP. A lot of people have misgivings about LISP and it’s parentheses, but I’d rather LISP than install and deal with ton of frameworks.</p><p>P.S: If you MUST use a frontend framework, use <a href="https://svelte.dev/">Svelte</a>, because it has significantly less overhead by way of not having to diff everything using a virtual dom like react or vue does. Note that I am cheating a little by using prism.js for syntax highlighting because I don’t want to deal with dependencies.</p><h3>Similar posts:</h3><p><a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/">There’s more to mathematics than rigour and proofs</a></p><p><a href="https://youtu.be/JjDsP5n2kSM">Jonathan Blow - How to program independent games - CSUA Speech</a></p><p><a href="https://cbloomrants.blogspot.com/2011/11/11-22-11-mature-programmer.html">The Mature Programmer</a></p>
+            </article>
+        </main>
+    </div>
+</body>
+
+</html>
