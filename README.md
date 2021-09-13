@@ -1,7 +1,6 @@
 # jestings
 
 source code for my blog made with racket/racket!
-https://jesty.ml
 
 ## instructions 
 Reset cache(required every racket update):
