@@ -90,11 +90,20 @@
   (txexpr 'details empty (append (list (summaryc (list '(class "more-examples")) "Extra Examples")) content)))
 
 ;accepts only the uid, not the full url
-(define (yt link)
-  (txexpr 'details empty (list (txexpr
-                                'summary '((style "color:red;")) (list "Youtube")) (txexpr 'iframe
-                                                                                           (list  (cons 'srcdoc (cons (string-append "<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/" link "?autoplay=1><img src=https://img.youtube.com/vi/" link "/hqdefault.jpg><span>▶</span></a>") empty))
-                                                                                                  '(allow "picture-in-picture") '(allowfullscreen "true") '(loading "lazy") '(width "560") '(height "315")) empty))))
+; https://youtu.be/fQnUTmOu3lc?t=1777
+; String String Bool -> txexpr
+; link to url, optional headline, optional bool
+(define (yt link #:headline [headline "Youtube"] #:open [open #false])
+  (define split (string-split link "?"))
+  (define cleaned-link-for-thumbnail (cond [(cons? split) (car split)]
+                                           [else link]))
+  (define start-open (if open '((open "")) null))
+  (txexpr 'details start-open
+          (list (txexpr
+                 'summary '((style "color:red;")) (list headline))
+                (txexpr 'iframe
+                        (list  (cons 'srcdoc (cons (string-append "<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/" link "?autoplay=1><img src=https://img.youtube.com/vi/" cleaned-link-for-thumbnail "/hqdefault.jpg><span>▶</span></a>") empty))
+                               '(allow "picture-in-picture") '(allowfullscreen "true") '(loading "lazy") '(width "560") '(height "315")) empty))))
 
 ; String -> String
 ; flips the bits

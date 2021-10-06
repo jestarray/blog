@@ -4,13 +4,15 @@
 ◊ptime{10/06/20}
 
 ◊sub-heading{Who cares!?}
-No really, this isn't me being cynical but who actually cares? You? The compiler? Coworkers reading and modifying your code? Fellow programmers importing and trying to use your code? The consumer that is running your code?
+No really, this isn't me being cynical but "who" is the one processing your code? You? The compiler? Coworkers reading and modifying your code? Fellow programmers importing and trying to use your code? The consumer that is running your code?
 
 ◊sub-heading{Metrics}
 
 For the compiler, it'd be less work for it to resolve dependencies accross files, so by this metric it'd be best if you put everything in 1 file.
 
 For programmers importing your code as a lib, they want the least amount of friction possible for integration. Sometimes this involves keeping everything in 1 file like the famous ◊a[#:href "https://github.com/nothings/stb"]{stb C libraries}.
+
+For fellow programmers modifying and contributing to your code, they'd prefer things be as simple as possible, easy to step through in a debugger.
 
 The consumer doesn't even see your code and probably does not care so long as it preforms fast, which is not always synonymous with "clean code".
 
