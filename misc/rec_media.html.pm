@@ -29,5 +29,8 @@ These are a list of books/audiobooks and movies that I found, changed some aspec
 ◊li{Lord of War}
 ◊li{The Wire}
 ◊li{Mr Robot}
+◊li{Contagion}
+◊li{Parasite}
+◊li{Snow Piercer}
 ◊li{The Social Network (basically all movies directed by Fincher at this point)}
 }

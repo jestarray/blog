@@ -39,4 +39,6 @@ Check out the ◊a[#:href "https://www.youtube.com/watch?v=e16UVGTGkw8&list=PLit
 ◊a[#:href "https://handmadehero.org/"]{Handmade Hero} is a series teaching how to program a video games from scratch, no libraries, everything is written from scratch. It's not as good compared to the courses listed above in terms of "information density/time" since it's quite lengthy, but it's still a great series where you get to see one of the top programmers in the world work naturally and dispell a lot myths of programming. He's also working on StarCode Galaxy which is more education oriented though.
 
 Honorable mentions:
+◊a[#:href "https://youtu.be/JjDsP5n2kSM"]{How to be an effective Programmer} Jonathan Blow's talk on operational wisdom and not being trigger happy to start shooting out the best code ever possible all the time
+
 ◊a[#:href "https://github.com/getify/You-Dont-Know-JS"]{You don't know JS} if you ever want to learn JS in depth
